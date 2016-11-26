@@ -34,6 +34,18 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.justify(@position) when (@position = between) {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.justify(@position) when (@position = around) {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
 .vertical-align(@position) when (@position = top) {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
